@@ -5,22 +5,21 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     // Access Modifier, Data Type, Name
-    public float speed=5.0f;
-    public float hInput;
-    public float fInput;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float speed = 25.0f;
+    private float turnSpeed = 30.0f;
+
+    private float hInput;
+    private float fInput;
 
     // Update is called once per frame
     void Update()
     {
+        // gathers the inputs for the controls (basically tells it what buttons are going to control it)
         hInput = Input.GetAxis("Horizontal");
         fInput = Input.GetAxis("Vertical");
-
+        // makes car go forward and back
         transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * hInput);
+        // makes car go left and right
+        transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime);
     }
 }
