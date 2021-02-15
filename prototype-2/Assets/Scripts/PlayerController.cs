@@ -31,7 +31,14 @@ public class PlayerController : MonoBehaviour
 
         //tells it how to move, left makes the controlls inverted but i like it
         transform.Translate(Vector3.left * hInput * Time.deltaTime * speed);
+        //helps it tell when to shoot
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Lanches projectile
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
     }   
+
     
         
        
