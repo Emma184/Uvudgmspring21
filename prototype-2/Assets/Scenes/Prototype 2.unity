@@ -520,8 +520,6 @@ MonoBehaviour:
   animalPrefabs:
   - {fileID: 4772159430359589691, guid: 888f95a4a9fcdd54b8761266faf7dda0, type: 3}
   - {fileID: 8725477690052493464, guid: 5d7f3218eb26a9449988938e4a19cfef, type: 3}
-  - {fileID: 6655309378024101204, guid: 862cc3845fe17744681946ac12fca547, type: 3}
-  animalpicker: 0
 --- !u!4 &700938007
 Transform:
   m_ObjectHideFlags: 0

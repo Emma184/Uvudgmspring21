@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6655309378024101290}
   - component: {fileID: 6655309378024101291}
   - component: {fileID: 114763955396602220}
+  - component: {fileID: 114635001798431160}
+  - component: {fileID: 54936770875777696}
+  - component: {fileID: 65767171580268146}
   m_Layer: 0
   m_Name: Food_Bone_01Prefab
   m_TagString: Untagged
@@ -103,5 +106,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb95c67922b7e94392e663de00525da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBound: 30
-  lowerBound: -30
+--- !u!114 &114635001798431160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655309378024101204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576b985e79aa5a948acf0c6d8b60254a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &54936770875777696
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655309378024101204}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 108
+  m_CollisionDetection: 0
+--- !u!65 &65767171580268146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655309378024101204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6528887, y: 0.12128265, z: 0.29866803}
+  m_Center: {x: 0, y: 0.060641326, z: 0}

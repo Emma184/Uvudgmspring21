@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 8027393342285587576}
   - component: {fileID: 6388626632303626621}
   m_Layer: 0
-  m_Name: Dog_Doberman_01
+  m_Name: Dog_Doberman_01Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,7 +843,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 54
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &4772159430359590195
 GameObject:
