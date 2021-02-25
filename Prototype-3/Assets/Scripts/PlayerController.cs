@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityMod;
        
@@ -22,13 +23,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // tells it how and when to have the player jump
         if(Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            // stops the player from spamming space
             isOnGround = false;
         }
         
     }
+    //
     private void OnCollisionEnter(Collision other)
     
     {
