@@ -8,9 +8,10 @@ public class PlayerControllerX : MonoBehaviour
     private Rigidbody playerRb;
     public float floatForce;
     public float gravityMod;
+    // constrains ballon
     private float topBound = 17;
     private float bottomBound = 0;
-    private bool OnGround;
+   
     public bool gameOver = false;
     //animation effects
     public ParticleSystem explosionParticle;
@@ -30,27 +31,30 @@ public class PlayerControllerX : MonoBehaviour
 
         // Apply a small upward force at the start of the game
         playerRb.AddForce(Vector3.up * floatForce);
-
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
         // While space is pressed and player is low enough, float up
-        if (Input.GetKey(KeyCode.Space) && gameOver && playerRb.transform.position.y < topBound)
+        // While space is pressed and player is low enough, float up
+        if(Input.GetKey(KeyCode.Space) && !gameOver && transform.position.y < topBound)
         {
-            playerRb.AddForce(Vector3.up * floatForce);
+            playerRb.AddForce(Vector3.up * 1 / 1.5f, ForceMode.Impulse);
         }
-    }
+        if(transform.position.x > topBound)
+        {
+            transform.position = new Vector3(transform.position.x, 24, transform.position.z);
+        }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if(playerRb.transform.position.y > bottomBound)
+        //sets constraints on the left side
+        if(transform.position.x < bottomBound)
         {
-            playerRb.AddForce(Vector3.up * floatForce);
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
         }
+
+        private void OnCollisionEnter(Collision other) 
+        { 
             // if player collides with bomb, explode and set gameOver to true
             if (other.gameObject.CompareTag("Bomb"))
         {
@@ -68,7 +72,8 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
-        }
+        }}
+           
 
     }
 
