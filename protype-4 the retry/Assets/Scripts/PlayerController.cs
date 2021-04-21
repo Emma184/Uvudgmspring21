@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 { 
     //speed and rigidbody 
         private Rigidbody playerRb;
-        public float speed;
+        public float speed = 30;
     //camera focus
         private GameObject focalPoint;
   
