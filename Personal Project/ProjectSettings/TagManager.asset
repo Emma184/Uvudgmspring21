@@ -9,6 +9,8 @@ TagManager:
   - enimies
   - player
   - basket
+  - focal Point
+  - candy
   layers:
   - Default
   - TransparentFX
