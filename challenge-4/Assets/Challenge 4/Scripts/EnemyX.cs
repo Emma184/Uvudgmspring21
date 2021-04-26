@@ -12,6 +12,8 @@ public class EnemyX : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
+        playerGoal =  GameObject.FindWithTag("PlayerGoal");
+
     }
 
     // Update is called once per frame
