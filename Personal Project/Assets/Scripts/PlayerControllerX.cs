@@ -9,6 +9,7 @@ public class PlayerControllerX : MonoBehaviour
     public float movementSpeed = 5;
     private Rigidbody playerRb;
     public GameObject Player;
+    public bool gameOver = false;
 
 
 
