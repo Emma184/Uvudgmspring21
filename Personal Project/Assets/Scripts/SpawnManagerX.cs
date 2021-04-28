@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SpawnManagerX : MonoBehaviour
 { 
+    // start off spawn manager script so that i can actually finish the quiz and start unit 5
     public GameObject enemyPrefab;
-    private float spawnRange = 9;
+    private float spawnRange = 30;
     public int waveNumber = 1;
-    public int enemyCount;
+   
     public GameObject candyPrefab;
     // Start is called before the first frame update
     void Start()
