@@ -59,9 +59,12 @@ public class PlayerControllerX : MonoBehaviour
             //for when the player hits the obstacles so they don't go through them
         if (other.CompareTag("obstacles"))
         {
+            Debug.Log("boop");
+            // supposed to stop player from phasing through the walls 
             Rigidbody obstacleRigidbody = other.gameObject.GetComponent<Rigidbody>();
             Vector3 boopPlayer = transform.position + other.gameObject.transform.position;
-                Debug.Log("boop");
+            obstacleRigidbody.AddForce(boopPlayer * 2, ForceMode.Impulse);
+            
         }
         // for when the player gets close to an enemy
             if (other.CompareTag("enimies"))
