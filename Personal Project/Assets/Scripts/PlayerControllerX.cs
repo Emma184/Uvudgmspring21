@@ -73,6 +73,7 @@ public class PlayerControllerX : MonoBehaviour
             //got idea from challenge 4
                ResetPlayerPosition();
                 Debug.Log("Raccoon attack");
+
             }
     }
    //got inspiration from challenge 4
